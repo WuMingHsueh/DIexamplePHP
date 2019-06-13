@@ -1,4 +1,5 @@
 <?php
-use BaseTemplatePHP\Service\Routers;
 
-$routers = new Routers;
+use DIexample\Service\Routers;
+
+$routers = new Routers($container);

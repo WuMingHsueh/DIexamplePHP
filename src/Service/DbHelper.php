@@ -1,7 +1,8 @@
 <?php
-namespace ShopProject\Service;
 
-use ShopProject\IEnvironment;
+namespace DIexample\Service;
+
+use DIexample\IEnvironment;
 use Illuminate\Database\Capsule\Manager as DB;
 
 class DbHelper
@@ -36,7 +37,7 @@ class DbHelper
 
 	private function dbConfigFile($fileName = "database.ini"): array
 	{
-		$configPath = dirname($_SERVER['DOCUMENT_ROOT'] ?? IEnvironment::DOCUMENT_ROOT) . "/phpWarehouse/" . IEnvironment::PROJECT_NAME . "/config/$fileName";
+		$configPath = dirname((isset($_SERVER['DOCUMENT_ROOT']) and $_SERVER['DOCUMENT_ROOT'] != '') ? $_SERVER['DOCUMENT_ROOT'] : IEnvironment::DOCUMENT_ROOT) . "/phpWarehouse/" . IEnvironment::PROJECT_NAME . "/config/$fileName";
 		$params = parse_ini_file($configPath);
 		return $params;
 	}

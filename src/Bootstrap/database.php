@@ -1,5 +1,5 @@
 <?php
 
-use ShopProject\Service\DbHelper;
+use DIexample\Service\DbHelper;
 
 $dbHelpler = new DbHelper;

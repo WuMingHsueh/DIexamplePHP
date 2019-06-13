@@ -1,16 +1,23 @@
 {
     "name": "ri3567/base-temple-php",
-    "description": "my person use php project base template for begin new php project",
+    "description": "test dependency injection package",
     "authors": [
         {
             "name": "Wu Ming-Hsueh",
             "email": "ri3567@gmail.com"
         }
     ],
-	"require": {},
+	"require": {
+        "klein/klein": "^2.1",
+        "illuminate/database": "^5.8",
+        "pimple/pimple": "^3.2",
+        "league/container": "^3.2",
+        "league/fractal": "^0.18.0",
+        "tedivm/stash": "^0.15.2"
+    },
 	"autoload": {
 		"psr-4": {
-			"BaseTemplatePHP\\" : "src/"
+			"DIexample\\" : "src/"
 		}
 	}
 }
