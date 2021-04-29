@@ -9,7 +9,7 @@
     ],
 	"require": {
         "klein/klein": "^2.1",
-        "illuminate/database": "^5.8",
+        "illuminate/database": "^6.20",
         "pimple/pimple": "^3.2",
         "league/container": "^3.2",
         "league/fractal": "^0.18.0",
